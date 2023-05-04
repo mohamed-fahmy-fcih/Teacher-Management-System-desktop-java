@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="776.0" prefWidth="1198.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Students.ProfileStudent">
+    <children>
+        <AnchorPane fx:id="add1" layoutX="10.0" layoutY="17.0" prefHeight="918.0" prefWidth="1147.0" style="-fx-background-color: #F2F2F2;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <children>
+            <GridPane layoutX="33.0" layoutY="18.0" prefHeight="576.0" prefWidth="1118.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                      <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text=":ID" GridPane.columnIndex="3">
+                          <font>
+                              <Font name="Arial Narrow Bold" size="24.0" />
+                          </font>
+                      </Label>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text="المدرسه:" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ProfileIdLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text="-" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ProfileSchoolLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text="-">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="24.0" />
+                     </font>
+                  </Label>
+                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text="الاسم:" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="Arial Narrow Bold" size="24.0" />
+                            </font>
+                        </Label>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text="الصف:" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text="المجموعه:" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ProfileNameLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text="-" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ProfileGradeLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text="-" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ProfileGroupLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text="-" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="24.0" />
+                     </font>
+                  </Label>
+                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text="رقم الطالب:" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="Arial Narrow Bold" size="24.0" />
+                            </font>
+                        </Label>
+                  <Label fx:id="ProfileNumberLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text="-" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text="رقم ولي الامر" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ProfileParentNumberLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text="-" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text="تاريخ الميلاد:" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ProfileDateLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text="-" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <HBox alignment="CENTER" layoutX="55.0" layoutY="612.0" prefHeight="100.0" prefWidth="1085.0" spacing="150.0">
+               <children>
+                  <Button onAction="#makePDF" prefHeight="70.0" prefWidth="260.0" style="-fx-background-color: #6b9cff;" text="طباعه PDF" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonGoToGrade2" onAction="#GoToDailyStudent" prefHeight="70.0" prefWidth="260.0" style="-fx-background-color: #6b9cff;" text="تفاصيل الحضور" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ButtonGoToGrade" onAction="#GoToGradeStudent" prefHeight="70.0" prefWidth="281.0" style="-fx-background-color: #6b9cff;" text="درجات الطالب" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            </children>
+         <effect>
+            <DropShadow color="#0000008c" height="30.0" radius="14.5" spread="0.37" width="30.0" />
+         </effect>
+        </AnchorPane>
+    </children>
+</AnchorPane>

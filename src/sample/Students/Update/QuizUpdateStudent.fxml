@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="665.0" prefWidth="1150.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Students.Update.QuizUpdateStudent">
+    <children>
+        <AnchorPane fx:id="add1" layoutX="10.0" layoutY="17.0" prefHeight="860.0" prefWidth="1196.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <children>
+                <Label alignment="CENTER" layoutX="21.0" layoutY="10.0" prefHeight="65.0" prefWidth="1128.0" style="-fx-background-color: #6b9cff;" text="درجات الحصص" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0">
+                    <font>
+                        <Font name="Arial Narrow Bold" size="24.0" />
+                    </font>
+                </Label>
+                <VBox alignment="CENTER" layoutX="28.0" layoutY="84.0" prefHeight="491.0" prefWidth="462.0" spacing="20.0" AnchorPane.leftAnchor="15.0">
+                    <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                                <ComboBox styleClass="textField-outline" fx:id="ExamComboBox" nodeOrientation="RIGHT_TO_LEFT" prefHeight="49.0" prefWidth="307.0" promptText="اختار الحصة" style="-fx-background-color: #F2F2F2;"/>
+                                <Label alignment="CENTER" prefHeight="51.0" prefWidth="171.0" text="اسم الحصة:" textFill="#434343">
+                                    <font>
+                                        <Font name="Arial Narrow Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                                <TextField styleClass="textField-outline" fx:id="ExamCurrentDegree" alignment="CENTER_RIGHT" maxWidth="-Infinity" prefHeight="51.0" prefWidth="307.0" promptText="درجة الحصة" style="-fx-background-color: #F2F2F2; -fx-prompt-font-fill: grey;">
+                           <font>
+                              <Font size="20.0" />
+                           </font></TextField>
+                                <Label alignment="CENTER" prefHeight="51.0" prefWidth="171.0" text="درجه الطالب:" textFill="#323232">
+                                    <font>
+                                        <Font name="Arial Narrow Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                     </children>
+                  </HBox>
+                      <Button onAction="#SaveQuizData" prefHeight="49.0" prefWidth="148.0" style="-fx-background-color: #6b9cff;" text="حفظ" textFill="WHITE">
+                          <font>
+                              <Font name="Arial Narrow Bold" size="21.0" />
+                          </font>
+                      </Button>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" layoutX="520.0" layoutY="84.0" prefHeight="555.0" prefWidth="615.0" AnchorPane.rightAnchor="15.0">
+                    <children>
+                        <TableView fx:id="DegreesTable" prefHeight="555.0" prefWidth="597.0">
+                            <columns>
+                                <TableColumn fx:id="DegreeDateCol" prefWidth="75.0" text="تاريخ الحصة" />
+                                <TableColumn fx:id="DegreeMaxCol" prefWidth="75.0" text="الدرجه النهائيه" />
+                                <TableColumn fx:id="DegreeCurrCol" prefWidth="75.0" text="درجه الطالب" />
+                                <TableColumn fx:id="DegreeNameCol" prefWidth="75.0" text="اسم الحصة" />
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                        </TableView>
+                    </children>
+                </VBox>
+            </children>
+            <effect>
+                <DropShadow color="#0000008c" height="30.0" radius="14.5" spread="0.37" width="30.0" />
+            </effect>
+        </AnchorPane>
+    </children>
+
+</AnchorPane>

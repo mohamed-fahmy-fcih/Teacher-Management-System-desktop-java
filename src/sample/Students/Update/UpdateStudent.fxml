@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1000.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Students.Update.UpdateStudent">
+    <children>
+        <AnchorPane fx:id="add1" layoutX="10.0" layoutY="17.0" prefHeight="918.0" prefWidth="1147.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+               <children>
+                  <Label text="تحديث الطالب" underline="true">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="671.0" spacing="100.0">
+                     <children>
+                        <Button onAction="#GoToQuizUpdateStudent" prefHeight="79.0" prefWidth="304.0" style="-fx-background-color: #6b9cff;" text="اضافة دراجات الحصة" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="24.0" />
+                           </font>
+                        </Button>
+                        <Button onAction="#GoToExamUpdateStudent" prefHeight="79.0" prefWidth="304.0" style="-fx-background-color: #6b9cff;" text="اضافة دراجات امتحان" textFill="WHITE" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="24.0" />
+                           </font>
+                        </Button>
+                        <Button onAction="#GoToBookUpdateStudent" prefHeight="79.0" prefWidth="304.0" style="-fx-background-color: #6b9cff;" text="اضافه كتاب" textFill="WHITE" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="24.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER" prefHeight="489.0" prefWidth="950.0">
+                     <children>
+                        <HBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                                  <Label maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text="المدرسه:">
+                                      <font>
+                                          <Font name="Arial Narrow Bold" size="24.0" />
+                                      </font>
+                                  </Label>
+                                  <TextField styleClass="textField-outline" fx:id="UpdateSchool" maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="250.0" promptText="مدرسة الطالب" style="-fx-background-color: #F2F2F2; -fx-prompt-text-fill: grey;">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                                  <Label maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text="الاسم:">
+                                      <font>
+                                          <Font name="Arial Narrow Bold" size="24.0" />
+                                      </font>
+                                  </Label>
+                                  <TextField styleClass="textField-outline" fx:id="UpdateName" maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="250.0" promptText="اسم الطالب" style="-fx-background-color: #F2F2F2; -fx-prompt-text-fill: grey;">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                                  <Label maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text="رقم الموبيل:">
+                                      <font>
+                                          <Font name="Arial Narrow Bold" size="24.0" />
+                                      </font>
+                                  </Label>
+                                  <TextField styleClass="textField-outline" fx:id="UpdateNumber" maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="250.0" promptText="رقم الموبيل" style="-fx-background-color: #F2F2F2; -fx-prompt-text-fill: grey;">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                                  <Label maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text="رقم ولي الامر:">
+                                      <font>
+                                          <Font name="Arial Narrow Bold" size="24.0" />
+                                      </font>
+                                  </Label>
+                                  <TextField styleClass="textField-outline" fx:id="UpdateParentNumber" maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="250.0" promptText="رقم الموبيل" style="-fx-background-color: #F2F2F2; -fx-prompt-text-fill: grey;">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                                  <Label maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text="المجموعه:">
+                                      <font>
+                                          <Font name="Arial Narrow Bold" size="24.0" />
+                                      </font>
+                                  </Label>
+                               <ComboBox styleClass="textField-outline" fx:id="UpdateGroup" prefHeight="50.0" prefWidth="250.0" promptText="محموعة الطالب" style="-fx-background-color: #F2F2F2; -fx-font-size: 15; -fx-prompt-text-fill: grey;" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" prefHeight="65.0" prefWidth="201.0" text="الصف الدراسى:">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox styleClass="textField-outline" fx:id="UpdateGradeCombo" prefHeight="50.0" prefWidth="250.0" promptText="صف الطالب" style="-fx-background-color: #F2F2F2; -fx-font-size: 15; -fx-prompt-text-fill: grey;" />
+                           </children>
+                        </HBox>
+                        <Button onAction="#UpdateData" prefHeight="81.0" prefWidth="200.0" style="-fx-background-color: #6b9cff;" text="حفظ" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            </children>
+         <effect>
+            <DropShadow color="#0000008c" height="30.0" radius="14.5" spread="0.37" width="30.0" />
+         </effect>
+        </AnchorPane>
+    </children>
+
+</AnchorPane>

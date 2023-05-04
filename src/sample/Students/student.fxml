@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1280.0" prefHeight="665.0" prefWidth="844.0" style="-fx-background-color: #333333;" styleClass="root" stylesheets="@../stylesheet/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Students.student">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" HBox.hgrow="ALWAYS">
+               <children>
+                  <AnchorPane fx:id="addLecStudent" layoutX="20.0" layoutY="92.0" prefHeight="599.0" prefWidth="1183.0" style="-fx-background-color: #ffffff;" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <children>
+                              <HBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="65.0" prefWidth="201.0" text="اسم المحاضره:">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="LectureNumberTextField" alignment="CENTER" prefHeight="65.0" prefWidth="237.0" style="-fx-background-color: #F2F2F2;" styleClass="textField-outline">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font></TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="602.0" layoutY="25.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="65.0" prefWidth="201.0" text="تاريخ المحاضره:">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="LectureDate" prefHeight="69.0" prefWidth="237.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="25.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="65.0" prefWidth="201.0" text="رقم الصف:">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="LectureComboBox" prefHeight="50.0" prefWidth="237.0" promptText="اختر الصف الدراسى" style="-fx-background-color: #F2F2F2;" styleClass="textField-outline" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="471.0" layoutY="25.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="65.0" prefWidth="201.0" text="درجة الكويز:">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="LectureDegreeTextField" alignment="CENTER" prefHeight="65.0" prefWidth="237.0" style="-fx-background-color: #F2F2F2;" styleClass="textField-outline">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </HBox>
+                              <Button contentDisplay="CENTER" onAction="#AddLecture" prefHeight="57.0" prefWidth="161.0" style="-fx-background-color: #4f75c2;" text="اضافه محاضره" textFill="WHITE" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+                                 </padding>
+                              </Button>
+                              <HBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #fff;" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                 <children>
+                                    <Button contentDisplay="CENTER" onAction="#DeleteLecture" prefHeight="57.0" prefWidth="161.0" style="-fx-background-color: #4f75c2;" text="مسح" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <TextField fx:id="LectureDeleteTextField" alignment="CENTER" prefHeight="65.0" prefWidth="331.0" style="-fx-background-color: #F2F2F2;" styleClass="textField-outline">
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label alignment="CENTER" prefHeight="65.0" prefWidth="166.0" text=":المحاضره ID">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="24.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </HBox>
+                              <Button contentDisplay="CENTER" onAction="#GoToAllLectures" prefHeight="57.0" prefWidth="161.0" style="-fx-background-color: #4f75c2;" text="تفاصيل المحاضرات" textFill="WHITE" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                        </GridPane>
+                     </children>
+                     <effect>
+                        <DropShadow color="#0000008c" height="30.0" radius="14.5" spread="0.37" width="30.0" />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane fx:id="attendStudent" layoutX="10.0" layoutY="47.0" prefHeight="700.0" prefWidth="991.0" style="-fx-background-color: #ffffff;" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <HBox alignment="CENTER" layoutX="148.0" layoutY="38.0" prefHeight="100.0" prefWidth="668.0" AnchorPane.leftAnchor="148.0" AnchorPane.rightAnchor="106.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="65.0" prefWidth="84.0" text="ID:">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="24.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="AttendSearchTextField" alignment="CENTER" prefHeight="65.0" prefWidth="331.0" style="-fx-background-color: #F2F2F2;" styleClass="textField-outline">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="AttendSearchBtn" contentDisplay="CENTER" onAction="#OnSearchID" prefHeight="57.0" prefWidth="161.0" style="-fx-background-color: #4f75c2;" text="بحث" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <GridPane fx:id="AttendGrid" alignment="CENTER" disable="true" layoutX="148.0" layoutY="192.0" prefHeight="396.0" prefWidth="718.0" AnchorPane.bottomAnchor="69.0" AnchorPane.leftAnchor="148.0" AnchorPane.rightAnchor="78.0" AnchorPane.topAnchor="192.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="71.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="65.0" text="الاسم:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" prefHeight="65.0" text="المجموعه:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="AttendNameLabel" alignment="CENTER" prefHeight="65.0" prefWidth="363.0" text="-" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="AttendGroupLabel" alignment="CENTER" prefHeight="65.0" prefWidth="201.0" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" prefHeight="65.0" text="مبلغ الحصه:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="AttendPriceTextField" alignment="CENTER" maxWidth="-Infinity" prefHeight="53.0" prefWidth="237.0" style="-fx-background-color: #F2F2F2;" styleClass="textField-outline" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></TextField>
+                              <Button contentDisplay="CENTER" onAction="#OnAttend" prefHeight="57.0" prefWidth="161.0" style="-fx-background-color: #4f75c2;" text="تحضير الطالب" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+                                 </padding>
+                              </Button>
+                              <Label alignment="CENTER_RIGHT" prefHeight="65.0" text="الصف:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="AttendGradeLabel" alignment="CENTER" prefHeight="65.0" prefWidth="201.0" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" prefHeight="65.0" text="رقم الحصة:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="AttendLectureCombo" prefHeight="48.0" prefWidth="237.0" promptText="اختر الحصه" style="-fx-background-color: #F2F2F2;" styleClass="textField-outline" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                           </children>
+                        </GridPane>
+                     </children>
+                     <effect>
+                        <DropShadow color="#0000008c" height="30.0" radius="14.5" spread="0.37" width="30.0" />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane fx:id="addStudent" layoutX="10.0" layoutY="82.0" prefHeight="599.0" prefWidth="1183.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <children>
+                              <HBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="65.0" prefWidth="201.0" text="الاسم:">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="AddNameTextField" alignment="CENTER" prefHeight="65.0" prefWidth="237.0" style="-fx-background-color: #F2F2F2;" styleClass="textField-outline">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="602.0" layoutY="25.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="65.0" prefWidth="201.0" text="المجموعه:">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="GroupTextField" prefHeight="65.0" prefWidth="237.0" promptText="اختر المجموعه" style="-fx-background-color: #F2F2F2;" styleClass="textField-outline" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="25.0" layoutY="25.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="65.0" prefWidth="201.0" text="الصف:">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="AddGradeCombo" prefHeight="65.0" prefWidth="237.0" promptText="اختر الصف" style="-fx-background-color: #F2F2F2;" styleClass="textField-outline" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="602.0" layoutY="215.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="65.0" prefWidth="201.0" text="رقم الطالب:">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="AddNumberTextField" alignment="CENTER" prefHeight="65.0" prefWidth="237.0" style="-fx-background-color: #F2F2F2;" styleClass="textField-outline">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="25.0" layoutY="215.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="65.0" prefWidth="201.0" text="المدرسه:">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="AddSchoolTextField" alignment="CENTER" prefHeight="65.0" prefWidth="237.0" style="-fx-background-color: #F2F2F2;" styleClass="textField-outline">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="65.0" prefWidth="201.0" text="رقم ولي الامر:">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="AddParentNumberTextField" alignment="CENTER" prefHeight="65.0" prefWidth="237.0" style="-fx-background-color: #F2F2F2;" styleClass="textField-outline">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="65.0" prefWidth="201.0" text="تاريخ الميلاد:">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="AddDate" prefHeight="47.0" prefWidth="318.0" />
+                                 </children>
+                              </HBox>
+                              <Button contentDisplay="CENTER" onAction="#OnAddStudent" prefHeight="57.0" prefWidth="161.0" style="-fx-background-color: #4f75c2;" text="اضافه طالب" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                        </GridPane>
+                     </children>
+                     <effect>
+                        <DropShadow color="#0000008c" height="30.0" radius="14.5" spread="0.37" width="30.0" />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane fx:id="SearchStudent" prefHeight="599.0" prefWidth="1183.0" style="-fx-background-color: #ffffff;" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="65.0" prefWidth="454.0" text="بحث عن طالب" underline="true">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <VBox alignment="CENTER" prefHeight="479.0" prefWidth="892.0">
+                                 <children>
+                                    <VBox alignment="TOP_RIGHT" prefHeight="133.0" prefWidth="892.0">
+                                       <children>
+                                          <Label alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="454.0" text="اختار كيفيه البحث عن الطالب:" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="Arial Narrow Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <RadioButton fx:id="SearchRadioID" alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="153.0" selected="true" text="بحث بالID">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="Arial Narrow" size="21.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="SearchGroup" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="SearchRadioName" alignment="CENTER_RIGHT" layoutX="739.0" layoutY="61.0" prefHeight="27.0" prefWidth="153.0" text="بحث بالاسم" toggleGroup="$SearchGroup">
+                                             <font>
+                                                <Font name="Arial Narrow" size="21.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </RadioButton>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" prefHeight="145.0" prefWidth="892.0">
+                                       <children>
+                                          <AnchorPane prefHeight="125.0" prefWidth="892.0">
+                                             <children>
+                                                <HBox fx:id="SearchIDHBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Button fx:id="buttonGoToProfilePage" alignment="CENTER" contentDisplay="CENTER" onAction="#GoToProfilePage" prefHeight="57.0" prefWidth="179.0" style="-fx-background-color: #4f75c2;" text="بحث عن الطالب" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Arial Narrow Bold" size="18.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <TextField fx:id="SearchIDTextField" alignment="CENTER" prefHeight="65.0" prefWidth="331.0" promptText="رقم ال ID" style="-fx-background-color: #F2F2F2;" styleClass="textField-outline">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="25.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </HBox>
+                                                <HBox fx:id="SearchNameHBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #fff;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <Button fx:id="buttonGoToProfilePage1" alignment="CENTER" contentDisplay="CENTER" onAction="#OnSearchName" prefHeight="57.0" prefWidth="179.0" style="-fx-background-color: #4f75c2;" text="بحث عن الطالب" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Arial Narrow Bold" size="18.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <TextField fx:id="SearchNameTextField" alignment="CENTER" prefHeight="65.0" prefWidth="331.0" promptText="اسم الطالب" style="-fx-background-color: #F2F2F2;" styleClass="textField-outline">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="25.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="50.0" />
+                                       </VBox.margin>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <effect>
+                        <DropShadow color="#0000008c" height="30.0" radius="14.5" spread="0.37" width="30.0" />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane fx:id="UpdateStudent" prefHeight="680.0" prefWidth="940.0" style="-fx-background-color: #ffffff;" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="702.0" prefWidth="1006.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" top="20.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Button fx:id="buttonGoToUpdatePage" contentDisplay="CENTER" onAction="#GoToUpdatePage" prefHeight="57.0" prefWidth="210.0" style="-fx-background-color: #4f75c2;" text="تحديث بيانات الطالب" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="40.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <TextField fx:id="UpdateSearch" alignment="CENTER" prefHeight="65.0" prefWidth="331.0" style="-fx-background-color: #F2F2F2;" styleClass="textField-outline">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></TextField>
+                                    <Label alignment="CENTER" prefHeight="65.0" prefWidth="201.0" text="ID:">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <effect>
+                        <DropShadow color="#0000008c" height="30.0" radius="14.5" spread="0.37" width="30.0" />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane fx:id="DeleteStudent" prefHeight="599.0" prefWidth="1183.0" style="-fx-background-color: #ffffff;" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" top="20.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Button contentDisplay="CENTER" onAction="#DeleteStudent" prefHeight="57.0" prefWidth="161.0" style="-fx-background-color: #4f75c2;" text="مسح الطالب" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <TextField fx:id="deleteId" alignment="CENTER" prefHeight="65.0" prefWidth="331.0" style="-fx-background-color: #F2F2F2;" styleClass="textField-outline">
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label alignment="CENTER" prefHeight="65.0" prefWidth="61.0" text="ID:">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="24.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <effect>
+                        <DropShadow color="#0000008c" height="30.0" radius="14.5" spread="0.37" width="30.0" />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane fx:id="DailyInformation" prefHeight="599.0" prefWidth="1183.0" style="-fx-background-color: #ffffff;" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                     <effect>
+                        <DropShadow color="#0000008c" height="30.0" radius="14.5" spread="0.37" width="30.0" />
+                     </effect>
+                     <children>
+                        <GridPane alignment="CENTER" prefHeight="680.0" prefWidth="922.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="465.0" minWidth="10.0" prefWidth="454.3333435058594" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="480.0" minWidth="10.0" prefWidth="467.6666564941406" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="السجل اليومى" textFill="#282828" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Narrow" size="45.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="DailyTable" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="3">
+                                 <columns>
+                                    <TableColumn fx:id="DailyDescription" prefWidth="75.0" text="الوصف" />
+                                    <TableColumn fx:id="DailyPaid" prefWidth="75.0" text="المبلغ" />
+                                    <TableColumn fx:id="DailyDate" prefWidth="75.0" text="التاريخ" />
+                                 </columns>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </GridPane.margin>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="108.0" prefWidth="337.0" text="الاجمالي:" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="36.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="totalMoney" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="108.0" prefWidth="337.0" text="645" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="36.0" />
+                                 </font>
+                              </Label>
+                              <Button contentDisplay="CENTER" onAction="#RefreshDailyTable" prefHeight="57.0" prefWidth="161.0" style="-fx-background-color: #4f75c2;" text="تجديد البيانات" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+                                 </padding>
+                              </Button>
+                              <Button contentDisplay="CENTER" onAction="#makePdfDailyPaidMoney" prefHeight="57.0" prefWidth="161.0" style="-fx-background-color: #4f75c2;" text="طباعه السجل" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <VBox alignment="TOP_CENTER" prefHeight="720.0" prefWidth="318.0" style="-fx-background-color: #6b9cff;">
+               <children>
+                  <AnchorPane prefHeight="156.0" prefWidth="318.0" style="-fx-background-color: #4f75c2;">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="144.0" prefWidth="318.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                              <ImageView fitHeight="119.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/logo.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </ImageView>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <ImageView fitHeight="63.0" fitWidth="72.0" onMouseClicked="#BackToLogin" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/SideIcons/logout.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets right="10.0" top="5.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <HBox fx:id="addStudentButton1" alignment="CENTER" prefHeight="33.0" prefWidth="318.0" styleClass="switch-buttons">
+                     <children>
+                        <Rectangle fx:id="rectanAddStudent1" fill="WHITE" height="66.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="15.0" />
+                        <HBox alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="303.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="192.0" text="اضافه محاضره" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="30.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                              </Label>
+                              <ImageView fitHeight="43.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/SideIcons/icons8_user_100px.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="attendButton" alignment="CENTER" prefHeight="33.0" prefWidth="318.0" styleClass="switch-buttons">
+                     <children>
+                        <Rectangle fx:id="rectanAttend" fill="WHITE" height="66.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="15.0" />
+                        <HBox alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="303.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="192.0" text="تسجيل حضور" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="30.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                              </Label>
+                              <ImageView fitHeight="43.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/SideIcons/icons8_user_100px.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="addButton" alignment="CENTER" prefHeight="52.0" prefWidth="318.0" styleClass="switch-buttons">
+                     <children>
+                        <Rectangle fx:id="rectanAdd" fill="WHITE" height="66.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="15.0" />
+                        <HBox alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="247.0" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="192.0" text="اضافه طالب" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="30.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                              </Label>
+                              <ImageView fitHeight="43.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/SideIcons/icons8_add_100px.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="searchButton" alignment="CENTER" prefHeight="42.0" prefWidth="318.0" styleClass="switch-buttons">
+                     <children>
+                        <Rectangle fx:id="rectanSearch" fill="WHITE" height="66.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="15.0" />
+                        <HBox alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="247.0" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="192.0" text="بحث عن طالب" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="30.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                              </Label>
+                              <ImageView fitHeight="43.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/SideIcons/icons8_search_100px.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="updateButton" alignment="CENTER" prefHeight="56.0" prefWidth="318.0" styleClass="switch-buttons">
+                     <children>
+                        <Rectangle fx:id="rectanupdate" fill="WHITE" height="66.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="15.0" />
+                        <HBox alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="247.0" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="192.0" text="تحديث طالب" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="30.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                              </Label>
+                              <ImageView fitHeight="43.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/SideIcons/icons8_update_left_rotation_100px.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="DeleteButton" alignment="CENTER" prefHeight="6.0" prefWidth="318.0" styleClass="switch-buttons">
+                     <children>
+                        <Rectangle fx:id="rectanDelete" fill="WHITE" height="66.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="15.0" />
+                        <HBox alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="247.0" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="192.0" text="مسح طالب" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="30.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                              </Label>
+                              <ImageView fitHeight="43.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/SideIcons/icons8_delete_100px.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="DailyButton" alignment="CENTER" prefHeight="12.0" prefWidth="318.0" styleClass="switch-buttons">
+                     <children>
+                        <Rectangle fx:id="rectanDaily" fill="WHITE" height="66.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="15.0" />
+                        <HBox alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="247.0" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="192.0" text="سجل اليومي" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="30.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                              </Label>
+                              <ImageView fitHeight="43.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/SideIcons/icons8_today_100px.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="AdminButton" alignment="CENTER_RIGHT" onMouseClicked="#GoToAdminPage" prefHeight="83.0" prefWidth="318.0" styleClass="switch-buttons">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="192.0" text="لوحة الادمن" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="30.0" />
+                           </font>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="43.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/SideIcons/icons8_profiles_100px.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="134.0" prefWidth="318.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="64.0" prefWidth="318.0">
+                           <children>
+                              <Rectangle fill="WHITE" height="3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="166.0" />
+                              <Label alignment="CENTER" text="Alpha Physics" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Book Antiqua Bold" size="25.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="2.0" top="2.0" />
+                                 </padding>
+                              </Label>
+                              <Rectangle fill="WHITE" height="3.0" layoutX="10.0" layoutY="66.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="166.0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <effect>
+                  <DropShadow color="#0000008c" height="30.0" radius="14.5" spread="0.37" width="30.0" />
+               </effect>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

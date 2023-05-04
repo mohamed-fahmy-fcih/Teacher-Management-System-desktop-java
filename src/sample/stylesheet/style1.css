@@ -1,0 +1,7 @@
+.root {
+    -fx-background-color: #333333;
+}
+
+.switch-buttons:hover {
+    -fx-background-color: #4f75c2;
+}

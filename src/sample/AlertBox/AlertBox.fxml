@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.Button?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../stylesheet/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AlertBox.AlertBoxController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox fx:id="AlertTitleBackground" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="headerAlert" text="ALERT BOX TITLE" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="25.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="logAlert" text="ALERT BOX TITLE" textFill="#575757">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <HBox fx:id="ConditionalHBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button contentDisplay="CENTER" onAction="#CheckTrue" prefHeight="57.0" prefWidth="161.0" style="-fx-background-color: #6b9cff;" text="نعم" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button contentDisplay="CENTER" layoutX="230.0" layoutY="32.0" onAction="#CheckFalse" prefHeight="57.0" prefWidth="161.0" style="-fx-background-color: #6b9cff;" text="لا" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox fx:id="AgreeHBox" alignment="CENTER" layoutX="10.0" layoutY="180.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button contentDisplay="CENTER" onAction="#CloseWindow" prefHeight="57.0" prefWidth="161.0" style="-fx-background-color: #6b9cff;" text="حسنا" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

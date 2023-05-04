@@ -1,0 +1,18 @@
+.switch-buttons:hover {
+    -fx-background-color: #4f75c2;
+}
+
+.success-color {
+    -fx-background-color: #4f75c2;
+}
+
+.error-color {
+    -fx-background-color: #EA4335;
+}
+
+.textField-outline {
+    -fx-background-color: #F2F2F2;
+    -fx-border-color: #b3b3b3;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+}
